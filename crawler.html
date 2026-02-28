@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Generating
+{% endblock %}
+
+{% block main %}
+
+        <p>Please select crawling algorithm and click "Crawl" to generate the sitemap and index</p>
+        <div>
+        <form action="/crawling" method="post">
+            <select name="crawl_mode">
+                <option value="" disabled selected>Please select crawling algorithm</option>
+                <option value="bfs">Breadth-first</option>
+                <option value="dfs">Depth-first</option>
+            </select>
+            <select name="index_mode">
+                <option value="" disabled selected>Please select indexing algorithm</option>
+                <option value="bfs">Breadth-first</option>
+                <option value="dfs">Depth-first</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <button class="btn btn-primary" type="submit">Crawl</button>
+        </div>
+    </form>
+
+{% endblock %}

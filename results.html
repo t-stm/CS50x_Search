@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Index
+{% endblock %}
+
+{% block main %}
+    <form action="/results" method="post">
+        <div class="mb-3" style="text-align: left;">
+            <input autocomplete="off" autofocus class="form-control w-25" name="search_term" placeholder="{{ word }}">
+        </div>
+        <br>
+        <div class="mb-3" style="text-align: left;">
+            <button class="btn btn-primary" type="submit" style="margin-left: 0;">Search</button>
+        </div>
+    </form>
+    <br>
+        <div class="mb-3" style="text-align: left;">
+            <p style="font-size: 150%;"><b>Results:</b></p>
+        </div>
+        <div class="mb-3" style="text-align: left;">
+
+            <p>{{ no_result }}</p>
+            <table style="margin-left: 0;">
+                {% for result in  results %}
+                <tr>
+                    <td>- <a href="{{ result }}" target="_blank" rel="noopener noreferrer">{{ result }}</a> </td>
+                </tr>
+                {% endfor %}
+
+            </table>
+
+        </div>
+
+{% endblock %}

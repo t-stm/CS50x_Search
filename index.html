@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Index
+{% endblock %}
+
+{% block main %}
+
+    <form action="/results" method="post">
+        <div class="mb-3" style="text-align: left;">
+            <input autocomplete="off" autofocus class="form-control w-25" name="search_term" placeholder="Please enter search term" >
+        </div>
+        <br>
+        <div style="text-align: left;">
+            <button class="btn btn-primary" type="submit" style="margin-left: 0;">Search</button>
+        </div>
+    </form>
+
+{% endblock %}

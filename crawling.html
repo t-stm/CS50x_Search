@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+   Index
+{% endblock %}
+
+{% block head %}
+  <meta http-equiv="refresh" content="10">
+{% endblock %}
+
+{% block main %}
+
+        <div class="mb-3">
+            <p>Crawling, please wait for the crawler to finish.</p>
+            <p>Preparing sitemap...</p>
+            <p>{{ sitemap_notice }}</p>
+        </div>
+
+{% endblock %}
