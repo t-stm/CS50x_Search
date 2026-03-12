@@ -59,7 +59,7 @@ This application is a mini-search engine for students of Harvard's CS50x course,
 ```bash
 # 1. Clone the repository
 git clone https://github.com/t-stm/CS50x_Search
-cd <your-repo-folder>
+cd CS50x_Search
 
 # 2. Install dependencies
 pip install -r requirements.txt
